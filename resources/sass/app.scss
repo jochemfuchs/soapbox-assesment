@@ -1,0 +1,97 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+#app {
+   background: url('/img/background.png') no-repeat right top;
+   min-height: 100vh;
+   background-size: contain;
+
+   @include media-breakpoint-down('md') {
+      background-color: $blue;
+
+   }
+}
+
+.btn-primary {
+   @include media-breakpoint-down('md') {
+      @include button-variant(#fff, #fff);
+   }
+}
+
+.form-label {
+   @include media-breakpoint-down('md') {
+      color: white;
+   }
+}
+
+h1, h2 {
+   color: $blue;
+   font-family: 'Roboto', sans-serif;
+
+   @include media-breakpoint-down('md') {
+      color: white;
+   }
+
+   @include media-breakpoint-down('sm') {
+      float: right;
+      margin-right: 1rem;
+   }
+}
+
+h1 {
+   font-weight: 700;
+}
+
+h2 {
+   font-weight: 500;
+   margin-bottom: 3rem;
+   font-style: italic;
+}
+
+.table-responsive {
+   background: white;
+}
+
+.left-column {
+   @extend .col-md-8;
+   @extend .col-lg-6;
+
+   padding-top: 2.5rem;
+
+   .logo {
+      width: 80%;
+      margin-bottom: 2rem;
+      float: right;
+      margin-right: 1rem;
+   }
+}
+
+.right-column {
+   @extend .d-none;
+   @extend .d-md-block;
+   @extend .col-md-4;
+   @extend .col-lg-6;
+
+   padding-top: 2.5rem;
+
+
+   .logo {
+      width: 400px;
+      max-width: 100%;
+      float: right;
+      margin-right: 1rem;
+
+      @include media-breakpoint-down('lg') {
+         margin-right: 0;
+      }
+   }
+}
